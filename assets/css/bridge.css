@@ -1,7 +1,7 @@
 
 .bridge {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    display: flex;
+    flex-direction: row-reverse;
     margin-inline: auto;
     /* overflow: hidden; */
     
@@ -71,6 +71,6 @@
 
   }
 
-  .containerBridge *{
-cursor: none;
-  } 
+.containerBridge *{
+    cursor: none;
+}

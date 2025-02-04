@@ -1,4 +1,3 @@
-
 export const player = new Tone.Sampler({
     urls: {
         E2: "E2.wav",

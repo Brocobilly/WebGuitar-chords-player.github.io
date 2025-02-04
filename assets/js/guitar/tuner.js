@@ -52,6 +52,10 @@ export class Tuner {
         return range
     }
 
+    get tuningNote () {
+        return this.tuned.pitch + this.tuned.octave
+    }
+
     tune(note) {
         const [pitch, octave] = note.match(this.noteRegex).splice(1, 2)
 

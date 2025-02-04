@@ -1,11 +1,10 @@
 import { strings } from '../guitar/string.js'
 import { player } from '../soundSystem/player.js'
-// import { createWaveformAnalyzer } from '../soundSystem/waveformAnalyzer.js'
  
 const bridge = document.querySelector('.bridge')
 const template = document.querySelector('#bridge-string')
 
-let stringWidth = 6
+let stringWidth = 1
 
 for (const number in strings) {
     const clone = document.importNode(template.content, true)
@@ -49,7 +48,7 @@ for (const number in strings) {
         waveformCtx.clearRect(0, 0, stringWaweform.width, stringWaweform.height);
     
         waveformCtx.beginPath();
-        waveformCtx.strokeStyle = "#00ff00";
+        waveformCtx.strokeStyle = strings[number].color;
         waveformCtx.lineWidth = stringWidth;
     
         const sliceHeight = stringWaweform.height / values.length;
@@ -69,18 +68,18 @@ for (const number in strings) {
         console.log('draw')
     }
 
-    stringWidth -= 1
+    stringWidth += 1
 
     drawVerticalWaveform()
     setTimeout(() => cancelAnimationFrame(frameId))
 
     const triggerSound = () => { 
-        if (strings[number].frettedNote) {
+        if (strings[number].fretPosition) {
 
             Tone.start().then(() => {
                 const now = Tone.now()
-                mutePlayer.triggerAttackRelease(strings[number].frettedNote, "8n", now) 
-                player.triggerAttackRelease(strings[number].frettedNote, "8n", now + 0.1) 
+                mutePlayer.triggerAttackRelease(strings[number].fretPosition.note, "8n", now) 
+                player.triggerAttackRelease(strings[number].fretPosition.note, "8n", now + 0.1) 
             })
 
             setTimeout(() => cancelAnimationFrame(frameId), 2500)
@@ -88,7 +87,7 @@ for (const number in strings) {
     }
     
     stringTrigger.addEventListener('pointerenter', () => {
-        if (strings[number].frettedNote) frameId = requestAnimationFrame(drawVerticalWaveform)
+        if (strings[number].fretPosition) frameId = requestAnimationFrame(drawVerticalWaveform)
     })
     
     // const handleStrumming = () => {

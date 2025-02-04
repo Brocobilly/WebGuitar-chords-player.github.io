@@ -49,6 +49,7 @@ body {
 
 .flex {
   display: flex;
+  align-items: center;
   flex-direction: row;
   gap: 5rem;
   justify-content: center;

@@ -13,6 +13,7 @@ for (const number in strings) {
     for (const note of string.tuningRange) {
         const option = document.createElement('option')
         option.value = option.textContent = note
+        if (note === string.tuned.pitch + string.tuned.octave) option.selected = true
         tunerElement.append(option)
     }
 

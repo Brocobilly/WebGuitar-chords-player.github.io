@@ -5,5 +5,6 @@ import './components/overlay.js'
 import './components/spectrum.js'
 import './components/waveform.js'
 import './components/cursorpick.js'
+import './components/chordManager.js'
 
 

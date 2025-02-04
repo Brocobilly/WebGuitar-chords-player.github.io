@@ -8,6 +8,7 @@ for (const number in strings) {
 
     const stringElement = document.createElement('fieldset')
     stringElement.classList.add('fretboard_string-container')
+    stringElement.style.backgroundColor = strings[number].color
 
     const string = strings[number]
 
@@ -16,13 +17,14 @@ for (const number in strings) {
         const noteClone = document.importNode(noteTemplate.content, true)
         const checkbox = noteClone.querySelector('input[type="checkbox"]')
         const label = noteClone.querySelector('label')
+        const span = noteClone.querySelector('span')
 
-        const fret = new Fret(checkbox, label, number)
+        const fret = new Fret(checkbox, label, span, number)
         fret.note = note
 
         string.frets.push(fret)
 
-        checkbox.addEventListener('input', () => !checkbox.checked ? string.muting(fret) : string.press(fret))
+        checkbox.addEventListener('input', () => !checkbox.checked ? string.muting() : string.press(fret))
 
         stringElement.append(noteClone)
     }
