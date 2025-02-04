@@ -1,0 +1,25 @@
+#spectrumCanvas, #waveformCanvas {
+    margin-inline: 1rem ;
+    display: block;
+    border: 1px solid #444;
+    background: hsla(0, 0%, 10%, 0.954);
+    width: 1000px;
+    height: 125px;
+  }
+
+.containerSpectrum {
+    display: flex;
+    background : rgb(183, 219, 203);
+    flex-direction: column;
+    margin-top: 2rem;
+    border: 0.5rem solid rgb(26, 22, 37);
+    border-radius: 25px;
+    border-top: 2rem solid rgb(26, 22, 37);
+    padding: 20px;
+    width: 100%;
+    height: fit-content;
+    z-index: 0;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 5px 5px hsla(0, 0%, 10%, 0.908));
+}

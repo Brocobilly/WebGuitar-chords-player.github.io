@@ -1,0 +1,23 @@
+.overlay {
+    font-family: "Press Start 2P", serif;
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    background: hsla(0, 0%, 10%, 0.954);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: white;
+    visibility : visible;
+    opacity: 1;
+    transition-duration: 1s;
+  
+  }
+  
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+  
+  }

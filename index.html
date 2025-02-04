@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
+
+        <!-- Style -->
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+        <title>Interactive Guitar Fretboard</title>
+       
+    </head>
+    <!-- <body> -->
+    <body class="gradientBackground">
+        <div class="cursor"></div>
+        <div class='overlay'> 
+            <span>click anywhere to start</span>
+        </div> 
+
+        <div>
+            <h1>
+                WebGuitar chords player
+            </h1>
+            <h2>
+                Project by Julien BOIDEVAIX & Alper ARSLAN
+            </h2>
+        </div>
+        <div class="flex">
+        <div class="container">
+            <p> To start, click on the fretboard and select the notes and chords you'd like to play. Then, strum the strings on the right with your mouse.</p>
+                <div class="containerNeck">
+                    <div class='chordStorage'>
+                        <button class="chordStorer">Add</button>
+                        <button class="chordApplyer">Apply</button>
+                        <button class="chordRemover">Remove</button>
+                        <button class="chordRemoverAll">Remove All</button>
+                        <div class="chordManager"></div>
+                    </div>
+                    <form class="headstock"></form>
+                    <form class="fretboard"></form>
+                </div>
+
+                <div class="containerRow">
+                    <div class="containerSpectrum">
+                        <canvas id="spectrumCanvas"></canvas>
+                        <canvas id="waveformCanvas"></canvas>
+                    </div>
+                </div>
+                
+        </div> 
+        <div class="containerBridge">
+            <div class="bridge"></div>
+        </div>
+    </div>
+
+        <!--  templates  -->
+
+        <template id="tuner">
+            <select class="tuner"></select>
+        </template>
+
+        <template id="fretboard-string">
+            <div class="fretboard_string-container"></div>
+        </template>
+
+        <template id="fretboard-note">
+            <div class="fretboard_string-note_relative">
+                <div class="fretboard_string-note_absolute">
+                    <input type="checkbox" hidden />
+                    <label class="fretboard_string-note">
+                        <span class="fretboard_string-note_text"></span>
+                    </label>
+                </div>
+            </div>
+        </template>
+
+        <template id="bridge-string">
+            <div class="bridge_string-container">
+                <button type="button" class="bridge_string-trigger"></button>
+                <div class="waveform-container">
+                <canvas class="bridge_string-waveform" width="200">
+                </div>
+                </canvas>
+            </div>
+
+        
+        </template>
+
+        <template id="stored-chord">
+            <div class="stored-chord_container">
+                <input type="radio" class="stored-chord_radio" hidden />
+                <label class="stored-chord_label"></label>
+            </div>
+        </template>
+
+        <!-- Tone.js -->
+        <script src="http://unpkg.com/tone"></script>
+
+        <!-- Script -->
+        <script type="module" src="./assets/js/main.js"></script>
+    </body>
+</html>
+

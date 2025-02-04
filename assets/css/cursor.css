@@ -1,0 +1,11 @@
+.cursor {
+    width: 200px;  /* Set this to your actual image width */
+    height: 200px; /* Set this to your actual image height */
+    background: url("./../guitarpick_hskl.png") no-repeat center;
+    background-size: cover; /* Use cover instead of contain */
+    position: absolute;
+    pointer-events: none;
+    display: none;
+    z-index: 10;
+
+}

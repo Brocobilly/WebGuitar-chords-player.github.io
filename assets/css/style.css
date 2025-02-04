@@ -1,0 +1,94 @@
+@import url('./overlay.css');
+@import url('./neck.css');
+@import url('./bridge.css');
+@import url('./cursor.css');
+@import url('./spectrum.css');
+/* @import url('./reset.css'); */
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Teko", serif;
+  color: white;
+  font-size: 3rem;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.saveChords {
+  width :100%;
+}
+
+.containerRow {
+  display: flex;
+  justify-content: space-between;
+  width :100%;
+}
+
+.container {
+  display: flex;
+  background : hsla(0, 0%, 100%, 0.278);
+  flex-direction: column ;
+  border: 16rem;
+  margin-top: 2rem;
+  border: 0.5rem solid rgb(26, 22, 37);
+  border-radius: 25px;
+  border-top: 2rem solid rgb(26, 22, 37);
+  padding-inline: 10rem;
+  width: fit-content; 
+  height: 100%;
+  z-index: 0;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(0 5px 5px hsla(0, 0%, 10%, 0.908));
+
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 5rem;
+  justify-content: center;
+}
+/* resulting css */
+.gradientBackground{
+  
+  background: 
+	
+  linear-gradient(350deg, rgba(255, 237, 77, 0.639), rgba(255,255,255,0.54)),
+	linear-gradient(159deg, rgba(255,45,233,1), rgba(81,187,201,0)),
+	radial-gradient(circle at 56% 50%, rgba(255,0,0,1), rgba(222,57,57,0)),
+	url(./../svg/background.svg);
+
+}
+
+h1 {
+ margin-inline: 5rem; 
+ margin-top : 1rem;
+ margin-bottom: 0;
+  font-family: "Honk", serif;
+    color: rgb(226, 43, 198);
+    font-size: 7rem;
+    font-weight: 200;
+    font-style: normal;
+    font-variation-settings:
+      "MORF" 15,
+      "SHLN" 50;
+height: fit-content;
+}
+
+h2 {
+    margin-inline: 6rem; 
+    margin-top : 1px;
+    font-family: "Teko", serif;
+    color: rgb(250, 237, 116);
+    font-size: 2rem;
+    font-weight: 500;
+    width: fit-content  ;
+    filter: drop-shadow(-2px 4px 0px black) drop-shadow(-2px 0px 0px black);
+    box-shadow: 5px 5px 0px black;
+ }
