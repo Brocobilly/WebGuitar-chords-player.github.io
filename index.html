@@ -35,32 +35,26 @@
         </div>
         <div class="flex">
         <div class="container">
-            <p> To start, click on the fretboard and select the notes and chords you'd like to play. Then, strum the strings on the right with your mouse.</p>
+            
                 <div class="containerNeck">
-                    <div class='chordStorage'>
-                        <button class="chordStorer">Add</button>
-                        <button class="chordApplyer">Apply</button>
-                        <button class="chordRemover">Remove</button>
-                        <button class="chordRemoverAll">Remove All</button>
-                        <div class="chordManager"></div>
-                    </div>
                     <form class="headstock"></form>
                     <form class="fretboard"></form>
                 </div>
-
                 <div class="containerRow">
-                    <div class="containerSpectrum">
-                        <canvas id="spectrumCanvas"></canvas>
-                        <canvas id="waveformCanvas"></canvas>
-                    </div>
+                    <div class ="saveChords"></div>
+                    
                 </div>
                 
+                <div class="containerSpectrum">
+                    <canvas id="spectrumCanvas"></canvas>
+                    <canvas id="waveformCanvas"></canvas>
+                </div>
         </div> 
         <div class="containerBridge">
             <div class="bridge"></div>
+
         </div>
     </div>
-
         <!--  templates  -->
 
         <template id="tuner">
@@ -72,14 +66,8 @@
         </template>
 
         <template id="fretboard-note">
-            <div class="fretboard_string-note_relative">
-                <div class="fretboard_string-note_absolute">
-                    <input type="checkbox" hidden />
-                    <label class="fretboard_string-note">
-                        <span class="fretboard_string-note_text"></span>
-                    </label>
-                </div>
-            </div>
+            <input type="checkbox" hidden />
+            <label class="fretboard_string-note"></label>
         </template>
 
         <template id="bridge-string">
@@ -92,13 +80,6 @@
             </div>
 
         
-        </template>
-
-        <template id="stored-chord">
-            <div class="stored-chord_container">
-                <input type="radio" class="stored-chord_radio" hidden />
-                <label class="stored-chord_label"></label>
-            </div>
         </template>
 
         <!-- Tone.js -->

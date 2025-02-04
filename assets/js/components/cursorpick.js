@@ -3,6 +3,7 @@ const containerBridge = document.querySelector('.containerBridge');
 
 containerBridge.addEventListener('mouseenter', () => {
     cursor.style.display = 'block';
+  
 });
 
 containerBridge.addEventListener('mouseleave', () => {
@@ -12,5 +13,6 @@ containerBridge.addEventListener('mouseleave', () => {
 containerBridge.addEventListener('mousemove', (ev) => {
     cursor.style.left = ev.pageX + 'px';
     cursor.style.top = ev.pageY + 'px';
+
 });
 

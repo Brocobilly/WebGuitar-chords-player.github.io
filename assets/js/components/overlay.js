@@ -1,3 +1,5 @@
+import { player } from "../soundSystem/player.js";
+
 const overlay = document.querySelector('.overlay')
 
 overlay.addEventListener('pointerdown', () => overlay.classList.add("hidden"))

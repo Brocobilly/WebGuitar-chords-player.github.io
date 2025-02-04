@@ -1,138 +1,31 @@
 .fretboard {
-  grid-area: fretboard;
-  align-self: end;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  margin-bottom: 5rem;
-
-  color: rgb(26, 22, 37);
-}
-
-.fretboard * {
-  box-sizing: border-box;
+display: flex;
+flex-direction: column-reverse;
+margin-top: 10rem;
+margin-bottom: 5rem;
 }
 
 .fretboard_string-container {
-  font-size: 1rem;
-  display : grid; 
-  grid-template-columns: repeat(22, 1fr);
-  gap: 2rem;
-  justify-items: center;
-  align-items: center;
-}
-
-.fretboard_string-note_relative {
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-  width: 3rem;
-  height: 3rem;
-}
-
-.fretboard_string-note_absolute {
-  position: absolute;
-}
-
-.fretboard_string-note {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  position: relative;
-
-  width: 3rem;
-  height: 3rem;
-
-  border-radius: 999px;
-  background-color: rgba(253, 253, 253, 0.856);
-
-  font-size: 2rem;
-  font-weight: 100;
-}
+    font-size: 1rem;
+    display : grid; 
+    grid-template-columns: repeat(22, 1fr);
+    gap: 0.5rem;
+    justify-items: center;
+  }
   
 input:checked + .fretboard_string-note {
-  width: 5rem;
-  height: 5rem;
-  border: 3px solid rgb(26, 22, 37);
-  font-size: 2.5em;
-  font-weight: 700;
-}
+    background: red;
 
-.fretboard_string-note_text {
-  position: absolute;
-  display: block;
-}
+  }
 
-.headstock {
-  grid-area: headstock;
+.fretboard_string-container:nth-child(3) {
+background : blue;
+  }
 
+  .containerNeck {
   display: flex;
-  flex-direction: column;
-  gap: 1.75rem;
-
-  margin-bottom: 5rem;
-}
-
-.chordStorage {
-  grid-area: chordStorage;
-  align-self: flex-start;
-
-  height: 100%;
-}
-
-.chordStorage button {
-  padding-block: 1rem;
-  padding-inline: 1.5rem;
-
-  border-radius: 15px;
-  font-size: 2rem;
-}
-
-.chordManager {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-
-  max-height: 15rem;
-  max-width: 100rem;
-
-  overflow-y: scroll;
-
-  color: rgb(26, 22, 37);
-}
-
-.stored-chord_label {
-  border-radius: 999px;
-}
-
-.stored-chord_radio:checked + .stored-chord_label {
-  color: blue;
-  font-weight: 700;
-}
-
-.tuner {
-  font-size: 2rem;
-}
-
-.containerNeck {
-  display: grid;
-
-  grid-template-columns: 5rem 1fr;
-  grid-template-rows: 20rem 1fr;
-  grid-template-areas: 
-    "chordStorage chordStorage chordStorage chordStorage"
-    "headstock fretboard fretboard fretboard";
-  
-  gap: 1rem;
-
   background : rgb(183, 219, 203);
+  flex-direction: row;
   /* margin-inline: 15rem; */
   margin-top: 2rem;
   border: 0.5rem solid rgb(26, 22, 37);
@@ -145,4 +38,4 @@ input:checked + .fretboard_string-note {
   justify-content: center;
   align-items: center;
   filter: drop-shadow(0 5px 5px hsla(0, 0%, 10%, 0.908));
-}
+  }
