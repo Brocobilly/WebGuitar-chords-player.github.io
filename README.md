@@ -1,5 +1,7 @@
 # WebGuitar-chords-player-
-Actam project - Julien Boidevaix / Alper Arslan
+Actam project - Julien Boidevaix (j.boidevaix@gmail.com) / Alper Arslan (alperarslan919@gmail.com)
+
+***SPECIAL THANK TO SYLVAIN LEFLON FOR ITS HELP ***
 
 This project consists of a interactive guitar player, using html, css and javascript.
 To play, you need to select notes on the fretboard, which is localized in the middle of the screen, and then strum on the strings by using your mouse pointer.
